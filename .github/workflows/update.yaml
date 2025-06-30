@@ -21,15 +21,17 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install feedparser pytz
+        run: |
+          pip install feedparser pytz
 
       - name: Generate news sitemap
-        run: python generate.py
+        run: |
+          python generate.py
 
       - name: Commit and push changes
         run: |
-    git config --global user.name "github-actions[bot]"
-    git config --global user.email "github-actions[bot]@users.noreply.github.com"
-    git add news-sitemap.xml
-    git commit -m "Auto update news sitemap" || echo "No changes to commit"
-    git push origin main
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add news-sitemap.xml
+          git commit -m "Auto update news sitemap" || echo "No changes to commit"
+          git push origin main
