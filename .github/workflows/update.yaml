@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: pip install feedparser pytz
 
-      - name: Generate news-sitemap.xml
+      - name: Generate news sitemap
         run: python generate.py
 
       - name: Commit and push changes
