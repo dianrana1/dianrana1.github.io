@@ -1,35 +1,41 @@
 import feedparser
-from datetime import datetime
+from datetime import datetime, timedelta
 import pytz
 
-RSS_URL = "https://www.dianrana.id/feeds/posts/default?alt=rss"
-BLOG_NAME = "Dian Rana News"
-BLOG_LANGUAGE = "id"
-TIMEZONE = pytz.timezone('Asia/Makassar')
+RSS_URL = 'https://www.dianrana.id/feeds/posts/default?alt=rss'
+TIMEZONE = 'Asia/Makassar'
+MAX_ARTICLES = 100
 
 feed = feedparser.parse(RSS_URL)
+tz = pytz.timezone(TIMEZONE)
+now = datetime.now(tz)
+yesterday = now - timedelta(days=2)
 
-with open("news-sitemap.xml", "w", encoding="utf-8") as f:
-    f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-    f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n')
-    f.write('        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">\n')
+items = []
 
-    for entry in feed.entries[:10]:  # max 10 artikel terakhir (aturan Google News)
-        try:
-            published = datetime(*entry.published_parsed[:6])
-            published = TIMEZONE.localize(published)
-            f.write("  <url>\n")
-            f.write(f"    <loc>{entry.link}</loc>\n")
-            f.write("    <news:news>\n")
-            f.write("      <news:publication>\n")
-            f.write(f"        <news:name>{BLOG_NAME}</news:name>\n")
-            f.write(f"        <news:language>{BLOG_LANGUAGE}</news:language>\n")
-            f.write("      </news:publication>\n")
-            f.write(f"      <news:publication_date>{published.isoformat()}</news:publication_date>\n")
-            f.write(f"      <news:title>{entry.title}</news:title>\n")
-            f.write("    </news:news>\n")
-            f.write("  </url>\n")
-        except Exception as e:
-            print("Error parsing entry:", e)
+for entry in feed.entries[:MAX_ARTICLES]:
+    if hasattr(entry, 'published_parsed'):
+        published = datetime(*entry.published_parsed[:6], tzinfo=pytz.utc).astimezone(tz)
+        if published >= yesterday:
+            items.append(f"""
+  <url>
+    <loc>{entry.link}</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Dian Rana</news:name>
+        <news:language>id</news:language>
+      </news:publication>
+      <news:publication_date>{published.isoformat()}</news:publication_date>
+      <news:title>{entry.title}</news:title>
+    </news:news>
+  </url>""")
 
-    f.write('</urlset>\n')
+sitemap = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+{''.join(items)}
+</urlset>"""
+
+with open('news-sitemap.xml', 'w', encoding='utf-8') as f:
+    f.write(sitemap.strip())
