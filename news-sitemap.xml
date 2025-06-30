@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+
+  <url>
+    <loc>https://www.dianrana.id/2025/06/catatan-akhir-bulan-dari-ikn-masjid.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Dian Rana</news:name>
+        <news:language>id</news:language>
+      </news:publication>
+      <news:publication_date>2025-06-30T09:17:00+08:00</news:publication_date>
+      <news:title>Catatan Akhir Bulan dari IKN: Masjid Negara, Basilika Nusantara, dan Fasilitas Penunjang yang Mulai Terbentuk</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://www.dianrana.id/2025/06/menyapa-pagi-di-ibu-kota-nusantara.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Dian Rana</news:name>
+        <news:language>id</news:language>
+      </news:publication>
+      <news:publication_date>2025-06-29T15:59:00+08:00</news:publication_date>
+      <news:title>Menyapa Pagi di Ibu Kota Nusantara: Cerita Dian Rana dari “Pasar Pagi Nusantara”</news:title>
+    </news:news>
+  </url>
+</urlset>
