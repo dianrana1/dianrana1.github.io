@@ -25,10 +25,10 @@ jobs:
       - name: Generate news-sitemap.xml
         run: python generate.py
 
-      - name: Commit and push changes
+            - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add news-sitemap.xml
           git commit -m "Auto update news sitemap" || echo "No changes"
-          git push
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
