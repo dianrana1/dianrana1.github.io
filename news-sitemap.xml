@@ -4,6 +4,17 @@
   xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
+    <loc>https://www.dianrana.id/2025/07/nusantara-eco-travellers-2025-wisata.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Dian Rana</news:name>
+        <news:language>id</news:language>
+      </news:publication>
+      <news:publication_date>2025-07-02T08:49:00+08:00</news:publication_date>
+      <news:title>Nusantara Eco Travellers 2025: Wisata Edukatif dan Ramah Lingkungan di Ibu Kota Nusantara</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://www.dianrana.id/2025/07/catatan-ikn-awal-juli-2025-menelusuri.html</loc>
     <news:news>
       <news:publication>
@@ -12,17 +23,6 @@
       </news:publication>
       <news:publication_date>2025-07-01T16:00:00+08:00</news:publication_date>
       <news:title>Update IKN Awal Juli 2025: Menelusuri Sisi Barat IKN, dari Kampus Gunadarma hingga Training Center PSSI</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://www.dianrana.id/2025/06/catatan-akhir-bulan-dari-ikn-masjid.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Dian Rana</news:name>
-        <news:language>id</news:language>
-      </news:publication>
-      <news:publication_date>2025-06-30T09:17:00+08:00</news:publication_date>
-      <news:title>Update Pembangunan Masjid Negara IKN: Air Limbah, Embung, dan Bendera Merah Putih</news:title>
     </news:news>
   </url>
 </urlset>
