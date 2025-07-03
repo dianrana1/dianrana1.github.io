@@ -4,6 +4,17 @@
   xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
+    <loc>https://www.dianrana.id/2025/07/menyapa-pagi-dari-ikn-potret-terkini.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Dian Rana</news:name>
+        <news:language>id</news:language>
+      </news:publication>
+      <news:publication_date>2025-07-02T23:57:00+08:00</news:publication_date>
+      <news:title>Dokumentasi Pagi di Gedung BIN, POLRI, dan Hunian ASN 3 Ibu Kota Nusantara by Dian Rana</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://www.dianrana.id/2025/07/nusantara-eco-travellers-2025-wisata.html</loc>
     <news:news>
       <news:publication>
