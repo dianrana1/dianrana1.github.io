@@ -1,135 +1,111 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dian Rana - Pemantauan Proyek IKN</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dian Rana - Dokumentator IKN">
+  <title>Beranda | Dian Rana - Dokumentator IKN</title>
+  <link rel="stylesheet" href="css/style.css">
   <style>
+    :root {
+      --maroon: #800000;
+      --light: #f5f5f5;
+      --dark: #1c1c1c;
+    }
+
     body {
-      font-family: sans-serif;
-      margin: 40px auto;
-      max-width: 900px;
-      padding: 0 20px;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--light);
+      color: var(--dark);
     }
-    h1, h2 {
-      color: #2c3e50;
+
+    header {
+      background-color: var(--maroon);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 20px;
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: bold;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
+
+    nav a:hover {
+      text-decoration: underline;
     }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: left;
+
+    .hero {
+      background: url('assets/images/hero.webp') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+      text-align: center;
     }
-    th {
-      background-color: #f7f7f7;
+
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
     }
-    tr:nth-child(even) {
-      background-color: #fafafa;
+
+    .content {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
+
+    .highlight {
+      background: white;
+      padding: 1rem;
+      border-left: 4px solid var(--maroon);
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
     footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #555;
+      background: var(--maroon);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
-
-  <!-- ✅ Schema.org JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://www.dianrana.id/",
-    "name": "Dian Rana – Dokumentator IKN",
-    "alternateName": "Dian Rana, Dokumentator Ibu Kota Nusantara, Konten Kreator IKN",
-    "url": "https://www.dianrana.id",
-    "description": "Dari hutan hingga menjadi ibu kota, Dian Rana hadir mendokumentasikan tiap langkah pembangunan IKN. Ikuti kisah nyata dari lapangan yang jarang tersorot media.",
-    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5EnKjlvoNuh3GKaKnVcc5X3ipyONCaHkFqXHSBC5nEjz6NhCeonhBO7nXoc-sleu6Eo7EEKirOU514QmrQHx6ICbXSLUj9d137nzAsM1qIRDk1wZOO492MFc-UC24SFOMF18S-jKP8C76t-cGhftDiRNYe6A0_4-fvYTSsFV266GsiPPhjklasywfbd0/w320-h320-rw/DIAN%20RANA.JPG",
-    "telephone": "+62-817-500-8180",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Titik Nol Ibu Kota Nusantara",
-      "addressRegion": "Kalimantan Timur",
-      "postalCode": "76147",
-      "addressCountry": "ID"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -0.9722525,
-      "longitude": 116.7130452
-    },
-    "openingHours": "Mo-Su 00:00-23:59",
-    "sameAs": [
-      "https://www.youtube.com/@dian-rana",
-      "https://www.google.com/maps/place/Dian+Rana/@-0.9722525,116.7130452,13z",
-      "https://www.wikidata.org/wiki/Q135194771",
-      "https://www.instagram.com/dianrana.id",
-      "https://www.tiktok.com/@dianrana.ikn",
-      "https://x.com/dianrana_id",
-      "https://www.linkedin.com/in/dian-rana/",
-      "https://su.wikipedia.org/wiki/Dian_Rana"
-    ]
-  }
-  </script>
 </head>
 <body>
+  <header>
+    <div class="logo"><strong>Dian Rana</strong></div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="https://www.dianrana.id/p/tentang-kami.html">Tentang Kami</a>
+    </nav>
+  </header>
 
-  <!-- ✅ Gambar utama -->
-  <img src="DIAN RANA & NATASYA PRIYANKA (1).jpg" alt="Dian Rana & Puteri Indonesia Kalimantan Timur" />
+  <section class="hero">
+    <h1>Dokumentasi IKN Terkini</h1>
+  </section>
 
-  <h1>Selamat Datang di Dian Rana - Dokumentator IKN</h1>
+  <main class="content">
+    <article class="highlight">
+      <h2>Runway Bandara Internasional Nusantara Sudah Dicat</h2>
+      <p>Landasan pacu sepanjang 3.000 meter telah dicat penuh dan siap uji. Namun operasional komersial masih menunggu regulasi.</p>
+      <a href="artikel.html">Baca selengkapnya &raquo;</a>
+    </article>
+  </main>
 
-  <p><strong>Dian Rana</strong> adalah inisiatif independen yang berfokus pada pemantauan proyek strategis nasional, khususnya pembangunan <strong>Ibu Kota Nusantara (IKN)</strong>. Kami menyediakan dokumentasi berkala yang dapat diakses publik untuk meningkatkan transparansi, keterbukaan informasi, serta partisipasi masyarakat terhadap proyek berskala besar yang dibiayai oleh negara.</p>
-
-  <p>Kami percaya bahwa informasi yang akurat dan akuntabel adalah kunci untuk pembangunan yang berkelanjutan dan demokratis. Melalui situs ini, Anda dapat mengikuti perkembangan harian pembangunan IKN secara langsung dan objektif.</p>
-
-  <p>Kunjungi juga laman utama kami di <a href="https://www.dianrana.id/p/tentang-kami.html" target="_blank">Tentang Dian Rana</a> untuk informasi lebih lengkap.</p>
-
-  <h2>📅 Daftar Update Pembangunan IKN</h2>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Tanggal</th>
-        <th>Judul Laporan</th>
-        <th>Link</th>
-      </tr>
-    </thead>
-    <tbody id="tabel-ikn">
-      <tr>
-        <td>02 Juli 2025</td>
-        <td>Update IKN - 02 Juli 2025</td>
-        <td><a href="IKN-Update-02-Juli-2025.html">Lihat Laporan</a></td>
-      </tr>
-      <!-- Tambahkan baris baru setiap hari -->
-    </tbody>
-      <tr>
-        <td>03 Juli 2025</td>
-        <td>Update IKN - 03 Juli 2025</td>
-        <td><a href="IKN-Update-03-Juli-2025.html">Lihat Laporan</a></td>
-      </tr>
-      <!-- Tambahkan baris baru setiap hari -->
-    </tbody>
-      <tr>
-        <td>03 Juli 2025</td>
-        <td>Update IKN - 03 Juli 2025</td>
-        <td><a href="IKN-Update-04-Juli-2025.html">Lihat Laporan</a></td>
-      </tr>
-      <!-- Tambahkan baris baru setiap hari -
-  </table>
   <footer>
-    <p>Konten ini dipublikasikan oleh <a href="https://www.dianrana.id" target="_blank">Dian Rana - Dokumentator IKN</a> sebagai bagian dari pemantauan pembangunan <strong><a href="https://www.dianrana.id/search/label/IKN" target="_blank">Ibu Kota Nusantara (IKN)</a></strong>.</p>
+    &copy; 2025 <a href="https://www.dianrana.id" style="color: white; text-decoration: underline;">Dian Rana</a> - Dokumentator IKN
   </footer>
-
 </body>
 </html>
