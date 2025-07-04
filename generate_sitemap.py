@@ -1,33 +1,34 @@
 import os
 from datetime import datetime
 
-# Ganti dengan URL GitHub Pages kamu:
-base_url = "https://dianrana1.github.io/"
+# Ganti ini dengan domain GitHub Pages kamu
+BASE_URL = "https://dianrana1.github.io/"
 
-# Folder tempat file HTML disimpan ('.' = root folder)
-html_folder = '.'
+# Folder tempat file HTML berada
+FOLDER = "."
 
-sitemap_entries = []
+# Ambil semua file .html di folder
+files = [f for f in os.listdir(FOLDER) if f.endswith(".html")]
 
-for filename in os.listdir(html_folder):
-    if filename.endswith('.html'):
-        full_url = base_url + filename
-        lastmod = datetime.today().strftime('%Y-%m-%d')
-        entry = f"""  <url>
-    <loc>{full_url}</loc>
+# Buat elemen <url> untuk setiap file
+urls = []
+for f in files:
+    url = BASE_URL + f
+    lastmod = datetime.today().strftime('%Y-%m-%d')
+    urls.append(f"""  <url>
+    <loc>{url}</loc>
     <lastmod>{lastmod}</lastmod>
-  </url>"""
-        sitemap_entries.append(entry)
+  </url>""")
 
-# Gabungkan semua entri ke dalam struktur XML
-sitemap_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+# Gabungkan semua jadi satu file XML
+sitemap = f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-{chr(10).join(sitemap_entries)}
+{chr(10).join(urls)}
 </urlset>
 """
 
 # Simpan ke file sitemap.xml
 with open("sitemap.xml", "w", encoding="utf-8") as f:
-    f.write(sitemap_xml)
+    f.write(sitemap)
 
 print("✅ sitemap.xml berhasil dibuat.")
