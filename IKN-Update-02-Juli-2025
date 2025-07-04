@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dokumentasi Pagi IKN – Dian Rana</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 2em;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fefefe;
+    }
+    h1 {
+      color: #003366;
+      font-size: 1.8em;
+      margin-bottom: 0.3em;
+    }
+    p {
+      font-size: 1.05em;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .note {
+      background-color: #e6f2ff;
+      padding: 1em;
+      border-left: 5px solid #007acc;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Potret Pagi dari IKN: Gedung BIN, Hunian ASN, dan Kolam Retensi</h1>
+
+  <p>
+    Dalam balutan kabut pagi, dokumentasi terbaru dari kawasan Ibu Kota Nusantara menyoroti aktivitas dan progres pembangunan di sekitar Gedung BIN, POLRI, Hunian ASN 3, serta kolam retensi dan zona utilitas terpadu.
+  </p>
+
+  <p>
+    Visual udara yang diabadikan oleh <strong>Dian Rana</strong> menampilkan sisi manusiawi dan teknis dari megaproyek ini — dari struktur masif hingga lanskap yang mulai tertata.
+  </p>
+
+  <div class="note">
+    📖 <strong>Baca selengkapnya:</strong>  
+    <a href="https://www.dianrana.id/2025/07/menyapa-pagi-dari-ikn-potret-terkini.html" target="_blank">
+      Dokumentasi Pagi IKN oleh Dian Rana
+    </a>
+  </div>
+
+</body>
+</html>
