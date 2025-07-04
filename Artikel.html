@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Daftar Artikel | Dian Rana - Dokumentator IKN">
+  <title>Artikel | Dian Rana - Dokumentator IKN</title>
+  <style>
+    :root {
+      --maroon: #800000;
+      --glass-bg: rgba(255, 255, 255, 0.15);
+      --glass-blur: blur(10px);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('assets/images/bg-pattern.webp') no-repeat center center/cover;
+      color: #fff;
+      backdrop-filter: var(--glass-blur);
+    }
+
+    header {
+      background-color: var(--maroon);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--glass-bg);
+      border-radius: 16px;
+      padding: 1.5rem;
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background: var(--maroon);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><strong>Dian Rana</strong></div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="tentang.html">Tentang Kami</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- MULAI: KOLOM ARTIKEL HARIAN -->
+    <div class="card">
+      <h3>Dokumentasi pagi di Gedung BIN & Polri</h3>
+      <p>Pemandangan yang memukau kalau matahari mulai menyinari kawasan Hunian Bin dan Polri di IKN <a href="IKN-Update-02-Juli-2025.html">Baca selengkapnya</a></p>
+    </div>
+  <!-- MULAI: KOLOM ARTIKEL HARIAN -->
+    <div class="card">
+      <h3>Taman Bandara Nusantara - ini Perkembangannya</h3>
+      <p>Berbagai fasilitas sudah terlihat ditambah keberadaan patung Gajah Mada yang ada di Taman Bandara Nusantara<a href="IKN-Update-03-Juli-2025.html">Baca selengkapnya</a></p>
+    </div>
+ <div class="card">
+      <h3>Runway Bandara Internasional Nusantara Rampung</h3>
+      <p>Pantauan Terbaru Runway Bandara Internasional Nusantara dari Udara<a href="IKN-Update-04-Juli-2025.html">Baca selengkapnya</a></p>
+    </div>
+    <!-- TAMBAHKAN ARTIKEL BARU DI BAWAH BARIS INI -->
+    
+  </main>
+
+  <footer>
+    &copy; 2025 <a href="https://www.dianrana.id" style="color: white; text-decoration: underline;">Dian Rana</a> - Dokumentator IKN
+  </footer>
+</body>
+</html>
