@@ -22,9 +22,11 @@ jobs:
       run: python generate_sitemap.py
 
     - name: Commit and push sitemap.xml
+      env:
+        TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
         git add sitemap.xml
         git commit -m "🔄 Auto-generate sitemap.xml" || echo "No changes"
-        git push
+        git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
