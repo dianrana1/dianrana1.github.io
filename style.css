@@ -1,0 +1,29 @@
+.hero-header {
+  width: 100%;
+  height: 80vh;
+  background-image: url('/assets/Screenshot 2025-07-04 103815.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* gelap transparan */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
